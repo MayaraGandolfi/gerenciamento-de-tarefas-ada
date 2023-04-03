@@ -3,30 +3,35 @@ package model;
 import java.time.LocalDate;
 
 public class Tarefa {
-
-    private Long id;
-    private String descrição;
+    private String titulo;
+    private String descricao;
     private LocalDate dataCriacao;
-    private LocalDate dataConclusão;
-    private String Status;
+    private LocalDate dataConclusao;
+    private boolean possuiLembrete;
+    private Prioridade prioridade;
+    private boolean concluida;
 
-    public Tarefa() {
+
+    public Tarefa(String titulo, Prioridade prioridade) {
+        this.dataCriacao = LocalDate.now();
+        this.titulo = titulo;
+        this.prioridade = prioridade;
     }
 
-    public Long getId() {
-        return id;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getDescrição() {
-        return descrição;
+    public String getDescricao() {
+        return descricao;
     }
 
-    public void setDescrição(String descrição) {
-        this.descrição = descrição;
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public LocalDate getDataCriacao() {
@@ -37,30 +42,35 @@ public class Tarefa {
         this.dataCriacao = dataCriacao;
     }
 
-    public LocalDate getDataConclusão() {
-        return dataConclusão;
+    public LocalDate getDataConclusao() {
+        return dataConclusao;
     }
 
-    public void setDataConclusão(LocalDate dataConclusão) {
-        this.dataConclusão = dataConclusão;
+    public void setDataConclusao(LocalDate dataConclusao) {
+        this.dataConclusao = dataConclusao;
     }
 
-    public String getStatus() {
-        return Status;
+    public boolean isPossuiLembrete() {
+        return possuiLembrete;
     }
 
-    public void setStatus(String status) {
-        Status = status;
+    public void setPossuiLembrete(boolean possuiLembrete) {
+        this.possuiLembrete = possuiLembrete;
     }
 
-    @Override
-    public String toString() {
-        return "Tarefa{" +
-                "id=" + id +
-                ", descrição='" + descrição + '\'' +
-                ", dataCriacao=" + dataCriacao +
-                ", dataConclusão=" + dataConclusão +
-                ", Status='" + Status + '\'' +
-                '}';
+    public Prioridade getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(Prioridade prioridade) {
+        this.prioridade = prioridade;
+    }
+
+    public boolean isConcluida() {
+        return concluida;
+    }
+
+    public void setConcluida(boolean concluida) {
+        this.concluida = concluida;
     }
 }
