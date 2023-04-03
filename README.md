@@ -1,5 +1,5 @@
 # gerenciamento-de-tarefas-ada
-Projeto de Gerenciamento de Tarefas para avaliação do modulo de testes automatizados do programa de Java - Deva
+Projeto de Gerenciamento de Tarefas para avaliação final do modulo de testes automatizados do programa de Java - Deva
 
 
 ## :hammer: Enunciado
