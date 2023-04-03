@@ -11,6 +11,13 @@ public class Tarefa {
     private Prioridade prioridade;
     private boolean concluida;
 
+    private Usuario usuario;
+
+    public Tarefa(String titulo, Prioridade prioridade, Usuario usuario) {
+        this.titulo = titulo;
+        this.prioridade = prioridade;
+        this.usuario = usuario;
+    }
 
     public Tarefa(String titulo, Prioridade prioridade) {
         this.dataCriacao = LocalDate.now();
@@ -72,5 +79,13 @@ public class Tarefa {
 
     public void setConcluida(boolean concluida) {
         this.concluida = concluida;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
